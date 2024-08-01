@@ -38,6 +38,12 @@ def F2(x, y):
     dy = x + np.cos(y)
     return dx, dy
 
+def F3(x, y):
+    dx = 2*x-y+3*(x**2-y**2)+2*x*y
+    dy = x-3*y-3*(x**2-y**2)+2*x*y
+    return dx, dy
 
 # Ejemplo de uso
 graficar_campo_direcciones(F2, xmin=-3, xmax=3, ymin=-2, ymax=2, xstep=20, ystep=20, normalizar=False, mostrar_flujo=True)
+# Ejemplo de uso
+graficar_campo_direcciones(F3, xmin=-3, xmax=3, ymin=-2, ymax=2, xstep=20, ystep=20, normalizar=True, mostrar_flujo=False)
